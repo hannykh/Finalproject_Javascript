@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Homework & Practice</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header sticky-top">
+    <nav class="navbar navbar-expand-lg py-3">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-3 fw-black" href="home.html">
+          <span class="brand-mark">JS</span>
+          <span>Homework </span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto gap-lg-3 align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="practice.html">Practice</a></li>
+            <li class="nav-item"><a class="nav-link active" href="homework.html">Homework</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section-shell">
+      <div class="container">
+        <div class="row align-items-end g-4 mb-5">
+          <div class="col-lg-8">
+            <h2 class="section-title mb-3">Homework</h2>
+            <p class="fs-4 text-slate-700 mb-0">Exercises 1–7: all coding assignments with working demos.</p>
+          </div>
+        </div>
+
+        <!-- 1. Validation Functions -->
+        <div class="exercise-panel p-4 p-lg-5 mb-4">
+          <p class="exercise-number mb-2">01</p>
+          <h3 class="h2 fw-black mb-3">Validation Functions</h3>
+          <p class="text-slate-600 mb-4">Enter a value and test each JavaScript validation function.</p>
+          <div class="row g-3 align-items-end">
+            <div class="col-lg-4">
+              <label class="form-label fw-bold">Input Value</label>
+              <input id="funcInput" class="form-control form-control-lg" value="42" aria-label="Value to test">
+            </div>
+            <div class="col-lg-8">
+              <div class="d-flex flex-wrap gap-2">
+                <button id="checkNumberBtn" class="btn btn-outline-dark rounded-pill px-3">checkNumber</button>
+                <button id="checkPosNumBtn" class="btn btn-outline-dark rounded-pill px-3">checkPositiveNumber</button>
+                <button id="checkDecimalBtn" class="btn btn-outline-dark rounded-pill px-3">checkDecimal</button>
+                <button id="checkPosDecBtn" class="btn btn-outline-dark rounded-pill px-3">checkPositiveDecimal</button>
+                <button id="checkEmailBtn" class="btn btn-outline-dark rounded-pill px-3">checkEmail</button>
+                <button id="checkBoolBtn" class="btn btn-outline-dark rounded-pill px-3">checkBoolean</button>
+              </div>
+              <p id="funcResult" class="result-inline mt-3">Click a button to test a function.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Commission Calculator -->
+        <div class="exercise-panel p-4 p-lg-5 mb-4">
+          <p class="exercise-number mb-2">02</p>
+          <h3 class="h2 fw-black mb-3">Commission Calculator</h3>
+          <p class="text-slate-600 mb-4">Enter a sale amount. Commission is calculated by tier.</p>
+          <div class="row g-3 align-items-end">
+            <div class="col-lg-4">
+              <label class="form-label fw-bold">Sale Amount</label>
+              <input id="saleInput" type="number" class="form-control form-control-lg" value="3500000" min="0">
+            </div>
+            <div class="col-lg-4">
+              <button id="calcCommissionBtn" class="btn btn-primary btn-lg rounded-pill px-4">Calculate</button>
+            </div>
+            <div class="col-lg-4">
+              <p id="commissionResult" class="result-inline">Commission: —</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Change Image Attributes -->
+        <div class="exercise-panel p-4 p-lg-5 mb-4">
+          <p class="exercise-number mb-2">03</p>
+          <h3 class="h2 fw-black mb-3">Change Image Attributes</h3>
+          <div class="row g-4">
+            <div class="col-lg-5 text-center">
+              <img id="changeImage" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80" alt="Coding workspace" width="100%" style="border-radius:16px;max-height:320px;object-fit:cover">
+            </div>
+            <div class="col-lg-7">
+              <div class="row g-3 mb-3">
+                <div class="col-sm-6">
+                  <label class="form-label fw-bold" for="imgSrc">Image URL</label>
+                  <input id="imgSrc" class="form-control" value="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=600&q=80">
+                </div>
+                <div class="col-sm-6">
+                  <label class="form-label fw-bold" for="imgAlt">Alt Text</label>
+                  <input id="imgAlt" class="form-control" value="JavaScript code on screen">
+                </div>
+              </div>
+              <div class="row g-3 mb-3">
+                <div class="col-sm-6">
+                  <label class="form-label fw-bold" for="imgWidth">Width (px)</label>
+                  <input id="imgWidth" type="number" class="form-control" value="400">
+                </div>
+                <div class="col-sm-6">
+                  <label class="form-label fw-bold" for="imgHeight">Height (px)</label>
+                  <input id="imgHeight" type="number" class="form-control" value="260">
+                </div>
+              </div>
+              <button id="changeImageBtn" class="btn btn-dark rounded-pill px-4">Change Image</button>
+              <button id="resetImageBtn" class="btn btn-outline-dark rounded-pill px-4">Reset</button>
+              <p id="imageInfo" class="text-slate-500 small mt-3 mb-0"></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Form Validation -->
+        <div class="exercise-panel p-4 p-lg-5 mb-4">
+          <p class="exercise-number mb-2">04</p>
+          <h3 class="h2 fw-black mb-3">Form Validation</h3>
+          <p class="text-slate-600 mb-4">Validation happens on input <em>and</em> when you click Submit.</p>
+          <form id="validationForm" novalidate>
+            <div class="row g-3">
+              <div class="col-lg-6">
+                <label class="form-label fw-bold" for="vName">Full Name</label>
+                <input id="vName" type="text" class="form-control" placeholder="Your full name">
+                <small id="vNameMsg" class="text-danger"></small>
+              </div>
+              <div class="col-lg-6">
+                <label class="form-label fw-bold" for="vEmail">Email</label>
+                <input id="vEmail" type="email" class="form-control" placeholder="you@example.com">
+                <small id="vEmailMsg" class="text-danger"></small>
+              </div>
+              <div class="col-lg-6">
+                <label class="form-label fw-bold" for="vAge">Age</label>
+                <input id="vAge" type="number" class="form-control" placeholder="18">
+                <small id="vAgeMsg" class="text-danger"></small>
+              </div>
+              <div class="col-lg-6">
+                <label class="form-label fw-bold" for="vPhone">Phone</label>
+                <input id="vPhone" type="text" class="form-control" placeholder="123-456-7890">
+                <small id="vPhoneMsg" class="text-danger"></small>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-dark btn-lg rounded-pill px-4">Submit</button>
+                <span id="formOverall" class="ms-3 fw-bold"></span>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!-- 5. List Management -->
+        <div class="exercise-panel p-4 p-lg-5 mb-4">
+          <p class="exercise-number mb-2">05</p>
+          <h3 class="h2 fw-black mb-3">List Management</h3>
+          <p class="text-slate-600 mb-4">Four student list variants with add, delete, edit, on/off toggle, search, and pagination.</p>
+
+          <ul class="nav nav-tabs mb-4" id="listTabs" role="tablist">
+            <li class="nav-item"><button class="nav-link active" id="tab-list1" data-bs-toggle="tab" data-bs-target="#pane-list1" type="button">Student List</button></li>
+            <li class="nav-item"><button class="nav-link" id="tab-jq" data-bs-toggle="tab" data-bs-target="#pane-jq" type="button">Student List by jQuery</button></li>
+            <li class="nav-item"><button class="nav-link" id="tab-list2" data-bs-toggle="tab" data-bs-target="#pane-list2" type="button">Student List 2</button></li>
+            <li class="nav-item"><button class="nav-link" id="tab-list3" data-bs-toggle="tab" data-bs-target="#pane-list3" type="button">Student List 3</button></li>
+          </ul>
+
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="pane-list1">
+              <div class="table-responsive">
+                <table class="table table-hover student-table" id="studentTable1">
+                  <thead><tr>
+                    <th>No</th><th>Student Code</th><th>FullName</th><th>[Sex]</th><th>Contact</th><th>On/Off</th><th>Delete</th><th>Edit</th>
+                  </tr></thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+              <button id="addStudentBtn1" class="btn btn-primary rounded-pill px-4 mt-3">+ Add Student</button>
+            </div>
+
+            <div class="tab-pane fade" id="pane-jq">
+              <div class="table-responsive">
+                <table class="table table-hover student-table" id="studentTableJQ">
+                  <thead><tr>
+                    <th>No</th><th>Student Code</th><th>FullName</th><th>[Sex]</th><th>Contact</th><th>On/Off</th><th>Delete</th><th>Edit</th>
+                  </tr></thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+              <button id="addStudentBtnJQ" class="btn btn-primary rounded-pill px-4 mt-3">+ Add Student (jQuery)</button>
+            </div>
+
+            <div class="tab-pane fade" id="pane-list2">
+              <div class="row g-3 mb-3">
+                <div class="col-lg-8"><input id="searchInput2" class="form-control form-control-lg" placeholder="Search students…"></div>
+                <div class="col-lg-4"><button id="searchBtn2" class="btn btn-primary btn-lg rounded-pill px-4">Search</button></div>
+              </div>
+              <div class="table-responsive">
+                <table class="table table-hover student-table" id="studentTable2">
+                  <thead><tr>
+                    <th>No</th><th>Student Code</th><th>FullName</th><th>[Sex]</th><th>Contact</th><th>On/Off</th><th>Delete</th><th>Edit</th>
+                  </tr></thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+              <button id="addStudentBtn2" class="btn btn-primary rounded-pill px-4 mt-3">+ Add Student</button>
+            </div>
+
+            <div class="tab-pane fade" id="pane-list3">
+              <div class="table-responsive">
+                <table class="table table-hover student-table" id="studentTable3">
+                  <thead><tr>
+                    <th>No</th><th>Student Code</th><th>FullName</th><th>[Sex]</th><th>Date</th><th>On/Off</th><th>Delete</th><th>Edit</th>
+                  </tr></thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+              <div class="d-flex justify-content-center align-items-center gap-3 mt-3">
+                <button id="prevPageBtn" class="btn btn-outline-dark rounded-pill px-4">Previous</button>
+                <span id="pageInfo" class="fw-bold">Page 1 of 1</span>
+                <button id="nextPageBtn" class="btn btn-outline-dark rounded-pill px-4">Next</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Login Form -->
+        <div class="exercise-panel p-4 p-lg-5 mb-4">
+          <p class="exercise-number mb-2">06</p>
+          <h3 class="h2 fw-black mb-3">Login Form Authentication</h3>
+          <p class="text-slate-600 mb-4">Static login — the correct credentials are shown for testing.</p>
+          <div class="row g-4">
+            <div class="col-lg-5">
+              <form id="loginForm" novalidate>
+                <div class="mb-3">
+                  <label class="form-label fw-bold">Username</label>
+                  <input id="loginUser" type="text" class="form-control form-control-lg" value="admin">
+                </div>
+                <div class="mb-3">
+                  <label class="form-label fw-bold">Password</label>
+                  <input id="loginPass" type="password" class="form-control form-control-lg" value="1234">
+                </div>
+                <button type="submit" class="btn btn-dark btn-lg rounded-pill px-4">Login</button>
+              </form>
+              <p id="loginMsg" class="mt-3 fw-bold"></p>
+              <small class="text-slate-500">Test user: <strong>admin</strong> / <strong>1234</strong></small>
+            </div>
+            <div class="col-lg-7">
+              <div id="loginResult" class="p-4 rounded-4 text-center d-none">
+                <p class="fs-4 fw-bold mb-0">✓ Login Successful</p>
+                <p class="text-slate-600">Welcome, Admin!</p>
+              </div>
+              <div id="loginFail" class="p-4 rounded-4 text-center d-none">
+                <p class="fs-4 fw-bold mb-0 text-danger">✗ Login Failed</p>
+                <p class="text-slate-600">Invalid username or password.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. University & Movie Lists -->
+        <div class="exercise-panel p-4 p-lg-5 mb-4">
+          <p class="exercise-number mb-2">07</p>
+          <h3 class="h2 fw-black mb-3">Universities in Cambodia & Movies from API</h3>
+
+          <ul class="nav nav-tabs mb-4" id="dataTabs" role="tablist">
+            <li class="nav-item"><button class="nav-link active" id="tab-uni" data-bs-toggle="tab" data-bs-target="#pane-uni" type="button">Universities</button></li>
+            <li class="nav-item"><button class="nav-link" id="tab-movies" data-bs-toggle="tab" data-bs-target="#pane-movies" type="button">Movies (API)</button></li>
+          </ul>
+
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="pane-uni">
+              <div class="table-responsive">
+                <table class="table table-hover student-table">
+                  <thead><tr><th>No</th><th>University Name</th><th>Website</th><th>Country</th></tr></thead>
+                  <tbody id="uniBody"></tbody>
+                </table>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="pane-movies">
+              <p class="text-slate-600 mb-3">Fetched from the TV Maze API using <code>fetch()</code>.</p>
+              <div id="movieList" class="row g-3"></div>
+              <button id="loadMoviesBtn" class="btn btn-primary rounded-pill px-4 mt-3">Load Movies from API</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
